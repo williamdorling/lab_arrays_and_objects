@@ -63,27 +63,17 @@ northernIrelandKeys = Object.keys(northernIreland);
  */
 
 scotlandPopulation = unitedKingdom[0].population;
-// englandPopulation = england.population;
-// walesPopulation = wales.population;
-// northernIrelandPopulation = northernIreland.population;
-// if (scotlandPopulation > englandPopulation && scotlandPopulation > walesPopulation && scotlandPopulation > northernIrelandPopulation){
-// console.log("Scotland has the biggest population");
-// }else if (scotlandPopulation < englandPopulation && scotlandPopulation < walesPopulation && scotlandPopulation < northernIrelandPopulation){
-// console.log("Scotland has the smallest popoulation");
-// }else{
-// console.log("Scotland's population is somewhere in the middle");
-// }
 
-count = 0;
+countriesBiggerThanScotland = 0;
 
 for (country of unitedKingdom){
   if (scotlandPopulation > country.population){
-    count ++;
+    countriesBiggerThanScotland ++;
   }
 }
-if (count === 0){
+if (countriesBiggerThanScotland === 0){
   console.log("Scotland has the smallest popoulation");
-} else if (count === 3){
+} else if (countriesBiggerThanScotland === 3){
   console.log("Scotland has the biggest population");
 }else{
   console.log("Scotland's population is somewhere in the middle");
